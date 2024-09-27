@@ -1,0 +1,4 @@
+../Src/dht11.c:19:6:dht11_setup	1
+../Src/dht11.c:30:6:dht11_start	1
+../Src/dht11.c:42:9:dht11_ping	4
+../Src/dht11.c:73:9:dht11_read	5

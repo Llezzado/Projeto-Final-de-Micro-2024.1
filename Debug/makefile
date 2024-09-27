@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Projeto final micro 2024 bare metal
+BUILD_ARTIFACT_NAME := Projeto micro modularizado
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Projeto\ final\ micro\ 2024\ bare\ metal.elf \
+Projeto\ micro\ modularizado.elf \
 
 MAP_FILES += \
-Projeto\ final\ micro\ 2024\ bare\ metal.map \
+Projeto\ micro\ modularizado.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Projeto\ final\ micro\ 2024\ bare\ metal.list \
+Projeto\ micro\ modularizado.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Projeto\ final\ micro\ 2024\ bare\ metal.elf secondary-outputs
+main-build: Projeto\ micro\ modularizado.elf secondary-outputs
 
 # Tool invocations
-Projeto\ final\ micro\ 2024\ bare\ metal.elf Projeto\ final\ micro\ 2024\ bare\ metal.map: $(OBJS) $(USER_OBJS) /home/juan/STM32CubeIDE/workspace_1.15.1/Projeto\ final\ micro\ 2024\ bare\ metal/STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Projeto final micro 2024 bare metal.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/juan/STM32CubeIDE/workspace_1.15.1/Projeto final micro 2024 bare metal/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Projeto final micro 2024 bare metal.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Projeto\ micro\ modularizado.elf Projeto\ micro\ modularizado.map: $(OBJS) $(USER_OBJS) /home/juan/STM32CubeIDE/workspace_1.15.1/Projeto\ micro\ modularizado/STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Projeto micro modularizado.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/juan/STM32CubeIDE/workspace_1.15.1/Projeto micro modularizado/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Projeto micro modularizado.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Projeto\ final\ micro\ 2024\ bare\ metal.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Projeto final micro 2024 bare metal.list"
+Projeto\ micro\ modularizado.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Projeto micro modularizado.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Projeto\ final\ micro\ 2024\ bare\ metal.elf Projeto\ final\ micro\ 2024\ bare\ metal.list Projeto\ final\ micro\ 2024\ bare\ metal.map Projeto\\ final\\ micro\\ 2024\\ bare\\ metal.elf default.size.stdout
+	-$(RM) Projeto\ micro\ modularizado.elf Projeto\ micro\ modularizado.list Projeto\ micro\ modularizado.map Projeto\\ micro\\ modularizado.elf default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

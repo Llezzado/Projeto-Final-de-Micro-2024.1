@@ -1,0 +1,6 @@
+/home/juan/STM32CubeIDE/workspace_1.15.1/Projeto micro modularizado/F1_Header/Include/core_cm3.h:1511:22:__NVIC_EnableIRQ	2
+../Src/Usart1_Bare_Metal_Custom_Lib.c:23:6:USART1_setup	1
+../Src/Usart1_Bare_Metal_Custom_Lib.c:54:6:uart_write	3
+../Src/Usart1_Bare_Metal_Custom_Lib.c:66:6:uart_info_dht11	1
+../Src/Usart1_Bare_Metal_Custom_Lib.c:85:6:USART1_IRQHandler	5
+../Src/Usart1_Bare_Metal_Custom_Lib.c:123:6:int_to_string	3

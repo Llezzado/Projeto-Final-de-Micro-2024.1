@@ -1,0 +1,7 @@
+/home/juan/STM32CubeIDE/workspace_1.15.1/Projeto micro modularizado/F1_Header/Include/core_cm3.h:1511:22:__NVIC_EnableIRQ	2
+../Src/tim2.c:16:6:RCC_setup	4
+../Src/tim2.c:50:6:TIM2_setup	1
+../Src/tim2.c:71:6:TIM2_delay_ms	2
+../Src/tim2.c:80:6:TIM2_delay_us	2
+../Src/tim2.c:97:6:TIM2_start_stop	2
+../Src/tim2.c:110:6:TIM2_IRQHandler	2

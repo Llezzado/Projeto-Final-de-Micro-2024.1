@@ -1,0 +1,8 @@
+../Src/Oled.c:23:6:OLED_send_command	16	static
+../Src/Oled.c:39:6:OLED_send_data	16	static
+../Src/Oled.c:52:6:OLED_init	8	static
+../Src/Oled.c:86:6:OLED_Fill	24	static
+../Src/Oled.c:105:6:OLED_DrawChar	24	static
+../Src/Oled.c:118:6:OLED_DrawString	16	static
+../Src/Oled.c:131:6:Oled_intro	8	static
+../Src/Oled.c:141:6:OLED_info_dht11	48	static
