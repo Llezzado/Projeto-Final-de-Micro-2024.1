@@ -218,8 +218,8 @@ int main(void)
 
 	while(1)
 	{
-		TIM2_delay_ms(1000);
-		GPIOC->ODR ^= (1 << 13);
+		//TIM2_delay_ms(1000);
+		//GPIOC->ODR ^= (1 << 13);
 		if(dht11_ping()){
 
 
@@ -233,9 +233,9 @@ int main(void)
 			OLED_info_dht11(TemperaturaI,TemperaturaD,HumidadeI,HumidadeD);
 
 
-			GPIOC->ODR ^= (1 << 13);
+			//GPIOC->ODR ^= (1 << 13);
 			TIM2_delay_ms(1000);
-			GPIOC->ODR ^= (1 << 13);
+			//GPIOC->ODR ^= (1 << 13);
 
 		}
 
@@ -746,7 +746,7 @@ void OLED_info_dht11(uint8_t HI, uint8_t HD, uint8_t TI, uint8_t TD){
 	intToString(HD,buffer);
 	OLED_DrawString(atual_x,atual_y,buffer);
 
-	OLED_DrawString(atual_x,atual_y," % DE HUMILDADE");
+	OLED_DrawString(atual_x,atual_y," % DE HUMIDADE");
 
 	l = 10;
 	h = 30;
@@ -759,7 +759,7 @@ void OLED_info_dht11(uint8_t HI, uint8_t HD, uint8_t TI, uint8_t TD){
 	intToString(TD,buffer);
 	OLED_DrawString(atual_x,atual_y,buffer);
 
-	OLED_DrawString(atual_x,atual_y," C DE CABACO");
+	OLED_DrawString(atual_x,atual_y," C");
 
 
 }
